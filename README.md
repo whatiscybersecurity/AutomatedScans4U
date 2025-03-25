@@ -137,7 +137,6 @@ This script is provided "as-is", without warranty of any kind. Use it at your ow
 ---
 
 Happy Scanning!  
-*Automating Scans 4 U Team*
 
 ---
 
