@@ -1,9 +1,9 @@
 #!/bin/bash
 # ------------------------------------------------------------------
 # Automating Scans 4 U
-# A simple script to check for and install nabuu and nuclei,
+# A simple script to check for and install naabu and nuclei,
 # prompt the user for domains or IP addresses,
-# validate each target, and then run nabuu followed by nuclei scans.
+# validate each target, and then run naabu followed by nuclei scans.
 # ------------------------------------------------------------------
 
 # Display custom ASCII header
@@ -66,7 +66,7 @@ install_if_missing() {
   fi
 }
 
-# Check if nabuu is installed; if not, install it via Go
+# Check if naabu is installed; if not, install it via Go
 install_if_missing "naabu" 'go install -v github.com/projectdiscovery/naabu/cmd/naabu@latest'
 
 # Check if nuclei is installed; if not, install it via Go
@@ -111,17 +111,17 @@ fi
 echo "[*] Valid targets saved to $valid_file."
 echo "-------------------------------------"
 
-# Run nabuu on valid targets
-echo "[*] Running nabuu..."
-nabuu_output="naabu_output.txt"
-cat "$valid_file" | naabu -o "$nabuu_output"
+# Run naabu on valid targets
+echo "[*] Running naabu..."
+naabu_output="naabu_output.txt"
+cat "$valid_file" | naabu -o "$naabu_output"
 echo "[*] naabu scanning complete. Results saved to $naabu_output."
 echo "-------------------------------------"
 
-# Run nuclei using the output from nabuu as targets
+# Run nuclei using the output from naabu as targets
 echo "[*] Running nuclei..."
 nuclei_output="nuclei_results.txt"
-cat "$nabuu_output" | nuclei -o "$nuclei_output"
+cat "$naabu_output" | nuclei -o "$nuclei_output"
 echo "[*] nuclei scanning complete. Results saved to $nuclei_output."
 echo "-------------------------------------"
 
