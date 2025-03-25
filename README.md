@@ -1,7 +1,7 @@
+# Automating Scans 4 U
+
 ![image](https://github.com/user-attachments/assets/b70c7831-5448-416a-a660-5a484eecbabe)
 
-
-# Automating Scans 4 U
 
 **Automating Scans 4 U** is a simple Bash script that helps automate vulnerability scanning using [naabu](https://github.com/projectdiscovery/naabu) and [nuclei](https://github.com/projectdiscovery/nuclei). The script interactively prompts you to enter domains or IP addresses, validates them (ensuring domains resolve via DNS), and then runs the following workflow:
 
