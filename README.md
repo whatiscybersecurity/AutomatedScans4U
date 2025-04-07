@@ -139,5 +139,3 @@ This script is provided "as-is", without warranty of any kind. Use it at your ow
 Happy Scanning!  
 
 ---
-
-You can save this content as `README.md` in your project folder.
